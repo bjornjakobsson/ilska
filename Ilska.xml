@@ -1,0 +1,37 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\..\..\Blizza~1\FrameXML\UI.xsd">
+	<Font name="MyFont" font="myfont.ttf" virtual="true">
+    <FontHeight>
+      <AbsValue val="12"/>
+    </FontHeight>
+  </Font>
+  <Script file="main.lua" />
+   <Frame name="Ragebar" parent="UIParent" enableMouse="true" movable="true">
+		 <Size x="64" y="64" />
+	  <Anchors><Anchor point="CENTER" relativeTo="UIParent"/></Anchors>
+	 <!-- Tags below add a visual element to the frame. -->
+	<Layers>
+	 <Layer level="ARTWORK">
+		<Texture setAllPoints="true">
+		<Color r="0.0" g="0.5" b="0.0" a="0.5" />
+		</Texture>
+	 </Layer>
+	 <Layer>
+		 <FontString name="testFont" inherits="GameFontHighlight" text="RAGE" justifyH="LEFT" justifyV="TOP">
+			 <Color r="1" g="0.8" b="1" a="1"/>
+			 <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parent" x="20" y="-20" />
+			 </Anchors>
+		 </FontString>
+	 </Layer>
+	</Layers>
+		<Scripts>
+	  <OnLoad>
+		self:RegisterForDrag("LeftButton");
+	  </OnLoad>
+	  <OnUpdate function="printRage" /> 
+	  <OnDragStart>self:StartMoving();</OnDragStart>
+	  <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+	</Scripts>
+   </Frame>
+ </Ui>
