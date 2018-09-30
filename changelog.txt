@@ -1,0 +1,7 @@
+Version 1.1
+	Added simple slash command for hiding/showing the addon	
+	Added rescale button
+	Added Width scaling
+
+Version 1.0
+	The ragebar is movable and displays the current rage on every update.
