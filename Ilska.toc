@@ -1,5 +1,5 @@
 ## Interface: 080000
-## Title: Ilska
+## Title: IlskaGIT
 ## Author: Björn Jakobsson
 ## Version: 0.1
 main.lua

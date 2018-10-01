@@ -1,0 +1,4 @@
+Högerklick meny:
+Lock 
+Färg
+Font storlek
