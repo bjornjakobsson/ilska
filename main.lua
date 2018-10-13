@@ -30,15 +30,13 @@ function IlskaResize(self)
 	
 	if cursorX > rightX then
 		local newWidth = parent:GetWidth()+(cursorX-rightX);
-		--parent:SetWidth(newWidth);
+		parent:SetWidth(newWidth);
 	else
 		local newWidth = parent:GetWidth()-(rightX-cursorX);
-	--	parent:SetWidth(newWidth);
+		parent:SetWidth(newWidth);
 	end
 	
-	--print(cursorY,"       ",botY);
-	
-end
+end	
 function printRage()
 	local rage = UnitPower("player");
 	RagebarTextFont:SetText(getRage());
@@ -47,3 +45,4 @@ function getRage()
 	local rage = UnitPower("player");
 	return rage;
 end
+

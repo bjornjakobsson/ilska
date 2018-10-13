@@ -2,12 +2,18 @@
 ..\..\..\Blizza~1\FrameXML\UI.xsd">
 	<Font name="MyFont" font="myfont.ttf" virtual="true">
     <FontHeight>
-		<AbsValue val="12"/>
+		<AbsValue val="30"/>
     </FontHeight>
+	</Font>
+	<Font name="DestinyFontHuge" font="Fonts\2002.ttf" virtual="true">
+	  <FontHeight>
+		<AbsValue val="32"/>
+	  </FontHeight>
+	  <Color r="0.1" g="0.1" b="0.1"/>
 	</Font>
 	<Script file="main.lua" />
 	<Frame name="Ragebar" parent="UIParent" enableMouse="true" movable="true">
-		<Size x="200" y="20" />
+		<Size x="100" y="40" />
 		<Anchors>
 			<Anchor point="CENTER" relativeTo="UIParent"/>
 		</Anchors>
@@ -17,8 +23,8 @@
 				<Color r="0" g="0" b="0" a="1" />
 				</Texture>
 			</Layer>
-			<Layer>
-				<FontString name="$parentTextFont" inherits="GameFontHighlight" text="RAGE" justifyH="LEFT" justifyV="TOP">
+			<Layer level="OVERLAY">
+				<FontString name="$parentTextFont" inherits="DestinyFontHuge" text="RAGE" justifyH="LEFT" justifyV="TOP">
 					<Color r="1" g="1" b="1" a="1"/>
 					<Anchors>
 						<Anchor point="CENTER" relativeTo="$parent" />
@@ -34,7 +40,7 @@
 			<OnDragStart>self:StartMoving();</OnDragStart>
 			<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
 		</Scripts>
-		<Frames>
+			<Frames>
 			<Button name ="$parentResizeButton">
 				<Size>
 					<AbsDimension x="20" y="20"/>
